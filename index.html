@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUNY Cortland: Give Now</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/337b4e4981.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <link rel="shortcut icon" href="favicon.png" />
+  </head>
+  <body>
+    <div class="notif-bar">
+      <div>
+        <span>Register Now!</span>
+        <span>Login</span>
+        <span>Help</span>
+      </div>
+    </div>
+    <div class="nav-container">
+      <nav>
+        <div class="nav-top">
+          <img src="img/logo.png" alt="SUNY Cortland Logo" />
+          <span>Red Dragon Network</span>
+          <div class="nav-top-right">
+            <div class="links">
+              <span>Cortland.edu</span>
+              <span>Make a Gift</span>
+              <span>Contact Us</span>
+            </div>
+            <div class="buttons">
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-youtube"></i>
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+        <div class="nav-bottom">
+          <span>Come Back</span>
+          <span>Give Back</span>
+          <span>Get Involved</span>
+          <span>Stay Connected</span>
+          <span>Parks Alumni House</span>
+          <span>About Us</span>
+        </div>
+      </nav>
+    </div>
+    <div class="main">
+      <div class="progress">
+        <div class="line"></div>
+        <div class="progress-item">
+          <div class="dot"></div>
+          <span>Gift Information</span>
+        </div>
+        <div class="progress-item">
+          <div class="dot dot-empty"></div>
+          <span>Donor Information</span>
+        </div>
+        <div class="progress-item">
+          <div class="dot dot-empty"></div>
+          <span>Billing</span>
+        </div>
+        <div class="progress-item">
+          <div class="dot dot-empty"></div>
+          <span>Review</span>
+        </div>
+        <div class="progress-item">
+          <div class="dot dot-empty"></div>
+          <span>Finish</span>
+        </div>
+      </div>
+      <div class="section-title">
+        <h2>Gift Information</h2>
+        <p>Select the best allocations that suits your needs.</p>
+      </div>
+      <h3>How much would you like to gift today?</h3>
+      <div class="amount-row">
+        <div for="a-50" class="amount-item">
+          $50
+        </div>
+        <div class="amount-item">$100</div>
+        <div class="amount-item">$250</div>
+        <div class="amount-item">$500</div>
+        <div id="custom-amount" class="amount-item">Custom Amount</div>
+      </div>
+      <div class="input-group how-much">
+        <span>Please enter a custom amount</span>
+        <div class="input-field">
+          <i class="fas fa-dollar-sign"></i>
+          <input type="number" placeholder="Enter custom amount" />
+        </div>
+      </div>
+      <div class="memory-honor toggle">
+        <div class="checkbox">
+          <i class="fas fa-check"></i>
+        </div>
+        <span>Make this a gift in memory/honor</span>
+      </div>
+      <div class="input-group who-for">
+        <span>Who is this gift in memory/honor of?</span>
+        <div class="input-field">
+          <input type="text" placeholder="Type name here" />
+        </div>
+        <span>What is their relation to you?</span>
+        <div class="input-field">
+          <input type="text" placeholder="Type relation here" />
+        </div>
+      </div>
+      <h3>Where would you like to gift your donation?</h3>
+      <div class="toggle">
+        <div class="checkbox">
+          <i class="fas fa-check"></i>
+        </div>
+        <span>Designate to area of greatest need</span>
+      </div>
+      <div class="filters">
+        <div id="filter-byCollege">
+          <span>Filter by college or unit</span>
+          <i class="fas fa-angle-down"></i>
+          <div class="filter-dropdown">
+            <div>Arts & Humanities</div>
+            <div>Natural Sciences & Mathematics</div>
+            <div>Social & Behavioral Sciences</div>
+            <div>Adolescence Education</div>
+            <div>Law, Engineering, & Medical</div>
+          </div>
+        </div>
+        <div class="input-field">
+          <input type="text" placeholder="Search all allocations" />
+          <i class="fas fa-search"></i>
+          <!-- <span>Search all allocations</span>
+          <i class="fas fa-search"></i> -->
+        </div>
+      </div>
+      <div
+        style="
+          height: 80vh;
+          overflow: scroll;
+          background: rgba(0, 0, 0, 0.08);
+          padding: 20px 20px;
+          border-radius: 10px;
+          margin-top: 25px;
+          border: 1px solid #afafaf;
+        "
+        class="overflow-scroll"
+      >
+        <div class="allocation-item">
+          <div
+            class="allocation-image"
+            style="background-image: url(img/wrestling.png);"
+          ></div>
+          <div class="allocation-text">
+            <div>
+              <strong>Wrestling Fund</strong>
+              <p>
+                The wrestling team needs funds to give scholarships to
+                hardworking athletes who need help. These scholarships will be
+                used to offset tuition and food costs. They also are looking to
+                upgrade their mat which is 5 years old.
+              </p>
+            </div>
+            <div class="alt-amount-gift">
+              <div class="gift-btn">Gift: $250</div>
+              <span> or </span>
+              <div class="input-field">
+                <i class="fas fa-dollar-sign"></i>
+                <input type="number" placeholder="Enter Amount" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="allocation-item">
+          <div
+            class="allocation-image"
+            style="background-image: url(img/jones.png);"
+          ></div>
+          <div class="allocation-text">
+            <div>
+              <strong>Professor Jones’s Scholarship</strong>
+              <p>
+                This scholarship will honor the late Professor Jones’s legacy.
+                The scholarship will go to first generation business
+                administration students who would not be able to attend SUNY
+                without it.
+              </p>
+            </div>
+            <div class="alt-amount-gift">
+              <div class="gift-btn">Gift: $250</div>
+              <span> or </span>
+              <div class="input-field">
+                <i class="fas fa-dollar-sign"></i>
+                <input type="number" placeholder="Enter Amount" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="allocation-item">
+          <div
+            class="allocation-image"
+            style="background-image: url(img/cortlandCup.jpg);"
+          ></div>
+          <div class="allocation-text">
+            <div>
+              <strong>The Cortland Cup - Reunion Giving Competition</strong>
+              <p>
+                Each year, alumni class groups with reunions in that year are
+                entered into The Cortland Cup, a friendly competition aimed at
+                adding a little extra fun to a crucial source of funds for the
+                school that benefit current SUNY students. No matter who wins
+                the awards, the real winners are the current Red Dragons.
+              </p>
+            </div>
+            <div class="alt-amount-gift">
+              <div class="gift-btn">Gift: $250</div>
+              <span> or </span>
+              <div class="input-field">
+                <i class="fas fa-dollar-sign"></i>
+                <input type="number" placeholder="Enter Amount" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="loadingcontent">
+          <div class="spinner"></div>
+        </div>
+      </div>
+      <!-- <div style="width: 100%; display: flex; justify-content: center; padding: 20px 0px;">
+            <i style="font-size: 48px; color: #BA1100;" class="fas fa-angle-down"></i>
+        </div> -->
+
+      <div class="giving-total">
+        <span>Total: </span>
+        <div class="total">$500</div>
+      </div>
+      <h3>Choose frequency of gift:</h3>
+      <div class="amount-row frequency">
+        <div class="amount-item">One Time</div>
+        <div class="amount-item">Monthly</div>
+        <div class="amount-item">Quarterly</div>
+        <div class="amount-item">Annually</div>
+      </div>
+      <h3>
+        Google matches gifts up to <span style="color: #ba1100;">$10K</span>.
+        Would you like to take part in their generous program for free?
+      </h3>
+      <div class="toggle">
+        <div class="checkbox">
+          <i class="fas fa-check"></i>
+        </div>
+        <span>Yes, double my impact!</span>
+      </div>
+      <h3>Make your gift personal! Write a message with your gift:</h3>
+      <textarea rows="8" placeholder="Type your message here"></textarea>
+      <div class="gift-btn">Save and Continue</div>
+    </div>
+    <div class="footer-container">
+      <footer>
+        <img src="img/logo.png" alt="SUNY Cortland Logo" />
+        <div class="footer-text">
+          <h3>SUNY Cortland Alumni Association</h3>
+          <p>P.O. Box 2000 Cortland, NY 13045-0900</p>
+          <p>607-753-2516 | alumni@cortland.edu</p>
+          <div class="buttons">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
